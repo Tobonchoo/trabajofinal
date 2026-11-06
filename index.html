@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Timmy's Restaurante & Cava | 40 Platos de Alta Cocina Colombiana y Michelin en La Estrella</title>
+  <meta name="description" content="Sitio oficial de Timmy's en La Estrella, Antioquia. 40 platos con receta abierta de comida típica colombiana y alta cocina Michelin de Francia, España e Italia. CEO: Andrés Julián Tobón Montoya." />
+  <meta name="author" content="Andrés Julián Tobón Montoya - Timmy's Gastronomy Group" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Hoja de Estilos Principal -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- Barra Superior de Progreso de Scroll -->
+  <div class="scroll-progress-bar" id="scrollProgressBar" aria-hidden="true"></div>
+
+  <!-- Enlace de Accesibilidad -->
+  <a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
+
+  <!-- ==================== HEADER INTELIGENTE FIJO ==================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <!-- Logotipo Generado en Código Vectorial IA para Timmy's -->
+      <a href="#inicio" class="brand-logo" aria-label="Timmy's Restaurante - Inicio">
+        <svg class="logo-svg" viewBox="0 0 68 68" width="52" height="52" role="img" aria-label="Logotipo Timmy's">
+          <defs>
+            <linearGradient id="timmyGradVivid" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#FF4B5C" />
+              <stop offset="50%" stop-color="#FF9F1C" />
+              <stop offset="100%" stop-color="#00B4A6" />
+            </linearGradient>
+            <linearGradient id="timmyGradPastel" x1="0%" y1="100%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#FFEAE3" />
+              <stop offset="50%" stop-color="#FFF7D6" />
+              <stop offset="100%" stop-color="#E3F8F3" />
+            </linearGradient>
+          </defs>
+          <circle cx="34" cy="34" r="31" fill="url(#timmyGradPastel)" stroke="url(#timmyGradVivid)" stroke-width="3.2" />
+          <polygon points="34,9 36.4,15.8 43.5,15.8 37.8,19.9 39.9,26.8 34,22.6 28.1,26.8 30.2,19.9 24.5,15.8 31.6,15.8" fill="#FF4B5C" />
+          <path d="M16 44 C16 29, 52 29, 52 44 Z" fill="url(#timmyGradVivid)" />
+          <rect x="13" y="46" width="42" height="4.5" rx="2.2" fill="#181A20" />
+          <path d="M30 38 Q34 32 41 37 Q36 42 30 38 Z" fill="#FFFDF9" />
+        </svg>
+        <div class="brand-text">
+          <span class="brand-name">Timmy's</span>
+          <span class="brand-tagline">Alta Cocina & Cava • La Estrella</span>
+        </div>
+      </a>
+
+      <!-- Navegación Principal -->
+      <nav class="main-nav" id="mainNav" aria-label="Navegación Principal">
+        <ul class="nav-list">
+          <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+          <li><a href="#telemetria-cocina" class="nav-link">Cocina en Vivo</a></li>
+          <li><a href="#menu-gastronomico" class="nav-link">40 Platos & Recetas</a></li>
+          <li><a href="#cava-licores" class="nav-link nav-link-special">🍷 Cava & Licores</a></li>
+          <li><a href="#ceo-section" class="nav-link">CEO</a></li>
+          <li><a href="#equipo-chefs" class="nav-link">Brigada</a></li>
+          <li><a href="#comentarios" class="nav-link">Opiniones</a></li>
+          <li><a href="#contacto" class="nav-link">Reservas</a></li>
+        </ul>
+      </nav>
+
+      <!-- Acciones Interconectadas: Bandeja de Degustación + Login -->
+      <div class="header-actions">
+        <button type="button" class="btn-tray-trigger" id="openTrayBtn" aria-label="Abrir bandeja de degustación">
+          <span>🍽️ Mi Selección</span>
+          <span class="tray-badge" id="trayCountBadge">0</span>
+        </button>
+
+        <button type="button" class="btn btn-pastel-auth" id="openAuthModalBtn">
+          <span id="authHeaderLabel">Ingresar / Registro</span>
+        </button>
+
+        <button type="button" class="hamburger-btn" id="hamburgerBtn" aria-label="Abrir menú móvil" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenido-principal">
+
+    <!-- ==================== 1. HERO ASIMÉTRICO CON BANDERAS REALES ==================== -->
+    <section class="hero-section" id="inicio">
+      <div class="hero-ambient-blobs" aria-hidden="true">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+      </div>
+
+      <div class="container hero-grid">
+        <div class="hero-content reveal-item reveal-left">
+          <div class="country-pill-strip">
+            <span class="strip-label">Fusión Oficial:</span>
+            <span class="flag-chip"><img src="https://flagcdn.com/w40/co.png" alt="Bandera de Colombia" /> Colombia (10)</span>
+            <span class="flag-chip"><img src="https://flagcdn.com/w40/fr.png" alt="Bandera de Francia" /> Francia (10)</span>
+            <span class="flag-chip"><img src="https://flagcdn.com/w40/es.png" alt="Bandera de España" /> España (10)</span>
+            <span class="flag-chip"><img src="https://flagcdn.com/w40/it.png" alt="Bandera de Italia" /> Italia (10)</span>
+          </div>
+
+          <h1 class="hero-title">
+            Enciclopedia Viva de <span class="text-gradient">40 Platos Maestros</span> en La Estrella
+          </h1>
+
+          <p class="hero-description">
+            Bienvenido a <strong>Timmy's</strong>, el destino gastronómico del Sur del Valle de Aburrá fundado y dirigido por su CEO <strong>Andrés Julián Tobón Montoya</strong>. Explora nuestras <strong>40 creaciones culinarias</strong> con su historia de origen, técnica térmica y receta desplegable paso a paso, interconectadas con nuestra <strong>Cava de Licores</strong>.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#menu-gastronomico" class="btn btn-primary">Ver los 40 Platos y Recetas</a>
+            <a href="#cava-licores" class="btn btn-secondary">Entrar al Portal de Licores 🍷</a>
+          </div>
+
+          <!-- Estadísticas Reales Animadas -->
+          <div class="hero-stats">
+            <div class="stat-card">
+              <span class="stat-number" data-target="40">0</span>
+              <span class="stat-label">Platos con Receta y Origen</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number" data-target="8">0</span>
+              <span class="stat-label">Etiquetas en Cava & Mixología</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number" data-target="4">0</span>
+              <span class="stat-label">Potencias Gastronómicas</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal-item reveal-right">
+          <div class="hero-showcase-frame">
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1100&q=85" alt="Plato de autor en Timmy's La Estrella Antioquia" class="hero-main-img" />
+            <div class="floating-glass-card card-top-left">
+              <img src="https://flagcdn.com/w40/co.png" alt="Colombia" class="mini-flag" />
+              <div>
+                <strong>La Estrella, Antioquia</strong>
+                <span>Sede Parque & Sede Pueblo Viejo</span>
+              </div>
+            </div>
+            <div class="floating-glass-card card-bottom-right">
+              <img src="https://flagcdn.com/w40/fr.png" alt="Francia" class="mini-flag" />
+              <div>
+                <strong>40 Fórmulas Abiertas</strong>
+                <span>Cocina Colombiana & Michelin</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 2. PANEL EXTRA: TELEMETRÍA DE COCINA EN VIVO & CARRUSEL ==================== -->
+    <section class="telemetry-section section-padding" id="telemetria-cocina">
+      <div class="container">
+        <div class="section-header text-center reveal-item reveal-up">
+          <span class="section-subtitle">Monitoreo Culinario en Tiempo Real</span>
+          <h2 class="section-title">Laboratorio Gastronómico en Vivo & Galería</h2>
+          <p class="section-desc">Parámetros térmicos de nuestras estaciones en La Estrella y recorrido por nuestros salones luminosos.</p>
+        </div>
+
+        <div class="telemetry-grid reveal-item reveal-scale">
+          <div class="telemetry-card">
+            <div class="telemetry-head">
+              <span class="pulse-dot green"></span>
+              <span class="telemetry-tag">Estación Sous-Vide #01</span>
+            </div>
+            <div class="telemetry-value">63.5 °C</div>
+            <p>Baño térmico controlado para carnes maduradas, aves francesas y cochinillo ibérico.</p>
+          </div>
+
+          <div class="telemetry-card">
+            <div class="telemetry-head">
+              <span class="pulse-dot amber"></span>
+              <span class="telemetry-tag">Horno de Leña & Brasa</span>
+            </div>
+            <div class="telemetry-value">290 °C</div>
+            <p>Brasa de guayabo, roble y naranjo para arroces valencianos, mamona y chicharrón suflado.</p>
+          </div>
+
+          <div class="telemetry-card">
+            <div class="telemetry-head">
+              <span class="pulse-dot teal"></span>
+              <span class="telemetry-tag">Cava Subterránea</span>
+            </div>
+            <div class="telemetry-value">13.8 °C • 72% HR</div>
+            <p>Climatización de precisión para Grandes Crus franceses, Barolos italianos y Rones de guarda.</p>
+          </div>
+
+          <div class="telemetry-card">
+            <div class="telemetry-head">
+              <span class="pulse-dot coral"></span>
+              <span class="telemetry-tag">Catálogo Activo Hoy</span>
+            </div>
+            <div class="telemetry-value">40 Platos</div>
+            <p>10 Colombianos, 10 Franceses, 10 Españoles y 10 Italianos disponibles en carta.</p>
+          </div>
+        </div>
+
+        <!-- Carrusel Visual -->
+        <div class="carousel-wrapper reveal-item reveal-up" aria-roledescription="carousel" aria-label="Galería de Timmy's">
+          <div class="carousel-track" id="carouselTrack">
+            <div class="carousel-slide active">
+              <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1400&q=85" alt="Salón Principal Timmy's en La Estrella" />
+              <div class="slide-caption">
+                <span class="slide-badge">Sede Parque Principal • La Estrella</span>
+                <h3>Arquitectura Pastel Luminosa y Jardín Interior</h3>
+                <p>Un ambiente diáfano pensado para resaltar la cromática de cada plato y brindar serenidad absoluta.</p>
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1400&q=85" alt="Emplatado con pinzas de precisión" />
+              <div class="slide-caption">
+                <span class="slide-badge">Alta Precisión Culinaria</span>
+                <h3>Técnica Europea con Alma Antioqueña</h3>
+                <p>Cada plato sale del pase de cocina revisado por nuestros chefs ejecutivos y sommeliers.</p>
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=1400&q=85" alt="Cava y degustación de vinos y licores en Timmy's" />
+              <div class="slide-caption">
+                <span class="slide-badge">Cava & Mixología</span>
+                <h3>El Santuario Líquido de Timmy's</h3>
+                <p>Etiquetas internacionales y destilados artesanales colombianos curados para el maridaje perfecto.</p>
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1400&q=85" alt="Banquete de fusión gastronómica" />
+              <div class="slide-caption">
+                <span class="slide-badge">Sede Campestre Pueblo Viejo</span>
+                <h3>Experiencias de Degustación en La Estrella</h3>
+                <p>Salones reservados para cenas empresariales, aniversarios y catas guiadas.</p>
+              </div>
+            </div>
+          </div>
+
+          <button type="button" class="carousel-btn prev-btn" id="prevSlideBtn" aria-label="Anterior">&#10094;</button>
+          <button type="button" class="carousel-btn next-btn" id="nextSlideBtn" aria-label="Siguiente">&#10095;</button>
+          <div class="carousel-dots" id="carouselDots"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 3. MENÚ GASTRONÓMICO DE 40 PLATOS CON RECETA Y ORIGEN ==================== -->
+    <section class="menu-section section-padding" id="menu-gastronomico">
+      <div class="container">
+        <div class="section-header text-center reveal-item reveal-up">
+          <span class="section-subtitle">Gran Catálogo Culinario de Timmy's</span>
+          <h2 class="section-title">40 Platos Maestros: Recetas Abiertas e Historia de Origen</h2>
+          <p class="section-desc">
+            Explora nuestras 40 especialidades (10 de Colombia, 10 de Francia, 10 de España y 10 de Italia). Haz clic en <strong>"Desplegar Origen, Ficha y Receta"</strong> en cualquier tarjeta para ver sus ingredientes y preparación detallada.
+          </p>
+        </div>
+
+        <!-- Barra de Herramientas Avanzada: Búsqueda + Ordenamiento + Filtros con Banderas -->
+        <div class="menu-controls-bar reveal-item reveal-up">
+          <div class="search-and-sort-row">
+            <div class="menu-search-box">
+              <input type="search" id="dishSearchInput" placeholder="🔍 Buscar entre los 40 platos por nombre, ingrediente o región (ej. trufa, chicharrón, bogavante, lechona, risotto)..." aria-label="Buscar entre los 40 platos" />
+            </div>
+
+            <div class="menu-sort-box">
+              <label for="dishSortSelect" class="sr-only">Ordenar platos</label>
+              <select id="dishSortSelect" aria-label="Ordenar platos">
+                <option value="default">✨ Orden de Curaduría del Chef</option>
+                <option value="price-asc">💲 Precio: Menor a Mayor</option>
+                <option value="price-desc">💎 Precio: Mayor a Menor</option>
+                <option value="name-asc">🔤 Nombre: A - Z</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="menu-filters" role="tablist" aria-label="Filtrar platos por bandera">
+            <button type="button" class="filter-btn active" data-filter="all">
+              <span>🌐 Todos los Platos (40)</span>
+            </button>
+            <button type="button" class="filter-btn" data-filter="colombia">
+              <img src="https://flagcdn.com/w40/co.png" alt="Bandera Colombia" class="filter-flag" />
+              <span>Típicos Colombianos (10)</span>
+            </button>
+            <button type="button" class="filter-btn" data-filter="francia">
+              <img src="https://flagcdn.com/w40/fr.png" alt="Bandera Francia" class="filter-flag" />
+              <span>Francia Michelin (10)</span>
+            </button>
+            <button type="button" class="filter-btn" data-filter="espana">
+              <img src="https://flagcdn.com/w40/es.png" alt="Bandera España" class="filter-flag" />
+              <span>España Michelin (10)</span>
+            </button>
+            <button type="button" class="filter-btn" data-filter="italia">
+              <img src="https://flagcdn.com/w40/it.png" alt="Bandera Italia" class="filter-flag" />
+              <span>Italia Michelin (10)</span>
+            </button>
+          </div>
+
+          <div class="menu-results-bar">
+            <span id="dishesCounterText">Mostrando 40 de 40 platos con receta completa</span>
+            <button type="button" class="link-btn" id="expandAllRecipesBtn">📖 Desplegar / Ocultar Todas las Recetas Visibles</button>
+          </div>
+        </div>
+
+        <!-- Grid Dinámico de los 40 Platos -->
+        <div class="menu-grid" id="menuGrid"></div>
+      </div>
+    </section>
+
+    <!-- ==================== 4. APARTADO DE LICORES CON TRANSICIÓN INMERSIVA AL ENTRAR ==================== -->
+    <section class="liquors-portal-section" id="cava-licores">
+      <div class="liquors-curtain-left" aria-hidden="true"></div>
+      <div class="liquors-curtain-right" aria-hidden="true"></div>
+      <div class="liquors-ambient-glow" aria-hidden="true"></div>
+
+      <div class="container liquors-inner">
+        <div class="section-header text-center liquors-header reveal-item reveal-scale">
+          <span class="liquor-portal-badge">✨ Transición a la Cava Privada de Timmy's ✨</span>
+          <h2 class="section-title liquor-title">Alta Cava, Destilados de Origen & Mixología Molecular</h2>
+          <p class="section-desc liquor-desc">
+            Cada uno de nuestros 40 platos está conectado con una etiqueta de esta cava en La Estrella. Explora el perfil sensorial animado de cada botella.
+          </p>
+        </div>
+
+        <div class="liquor-filters reveal-item reveal-up">
+          <button type="button" class="liq-filter-btn active" data-liq-filter="all">🥂 Toda la Cava (8)</button>
+          <button type="button" class="liq-filter-btn" data-liq-filter="vino-espumoso">🍾 Champagne & Grandes Vinos</button>
+          <button type="button" class="liq-filter-btn" data-liq-filter="destilado">🥃 Destilados & Añejos</button>
+          <button type="button" class="liq-filter-btn" data-liq-filter="mixologia">🧪 Coctelería de Autor Colombiana</button>
+        </div>
+
+        <div class="sommelier-assistant-bar reveal-item reveal-up">
+          <div class="sommelier-label">
+            <strong>🤵‍♂️ Sommelier Digital Interactivo:</strong>
+            <span>Elige una familia de platos para iluminar su botella ideal en la cava:</span>
+          </div>
+          <select id="sommelierSelector" aria-label="Seleccionar familia de platos para recomendación">
+            <option value="">-- Selecciona un perfil gastronómico --</option>
+            <option value="liq-1">Carnes Francesas, Pato, Pichón y Estofados -> Châteauneuf-du-Pape</option>
+            <option value="liq-2">Mariscos, Cazuelas, Arroces Marinos y Pescados -> Champagne Grand Cru</option>
+            <option value="liq-3">Bandeja Paisa, Lechona, Mamona y Posta Cartagenera -> Ron Colombiano 21 Años</option>
+            <option value="liq-4">Risottos, Pastas Trufadas y Ossobuco Italiano -> Barolo DOCG Riserva</option>
+            <option value="liq-5">Txuletón Vasco, Cochinillo, Fabada y Rabo de Toro -> Ribera del Duero</option>
+            <option value="liq-6">Entradas Vegetales, Tamal, Mote y Ceviches -> Elixir de Lulo & Viche</option>
+          </select>
+        </div>
+
+        <div class="liquors-grid" id="liquorsGrid"></div>
+      </div>
+    </section>
+
+    <!-- ==================== 5. SECCIÓN EJECUTIVA DEL CEO: ANDRÉS JULIÁN TOBÓN MONTOYA ==================== -->
+    <section class="ceo-section section-padding" id="ceo-section">
+      <div class="container">
+        <div class="ceo-card">
+          <!-- Columna Fotografía Oficial del CEO con Autodetección de Nombre de Archivo -->
+          <div class="ceo-image-wrapper reveal-item reveal-left">
+            <img
+              src="./ceo.jpg"
+              id="ceoOfficialPhoto"
+              alt="Andrés Julián Tobón Montoya - CEO y Fundador de Timmy's Restaurante"
+              class="ceo-photo"
+              data-fallback-1="./my-profile-img.jpg"
+              data-fallback-2="./my-profile-img_2.jpg"
+            />
+            <div class="ceo-badge-floating">
+              <img src="https://flagcdn.com/w40/co.png" alt="Colombia" class="ceo-flag-icon" />
+              <div>
+                <span>CEO & Fundador</span>
+                <strong>Andrés Julián Tobón Montoya</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="ceo-content reveal-item reveal-right">
+            <span class="section-subtitle">Dirección General & Estrategia Corporativa</span>
+            <h2 class="ceo-name">Andrés Julián Tobón Montoya</h2>
+            <p class="ceo-role">Empresario Gastronómico, Inversionista Hospitalario & CEO de Timmy's Group</p>
+
+            <div class="ceo-tabs-nav" role="tablist">
+              <button type="button" class="ceo-tab-btn active" data-ceo-tab="vision">Visión Empresarial</button>
+              <button type="button" class="ceo-tab-btn" data-ceo-tab="trayectoria">Hoja de Ruta & Innovación</button>
+              <button type="button" class="ceo-tab-btn" data-ceo-tab="compromiso">Impacto en Antioquia</button>
+            </div>
+
+            <div class="ceo-tab-panel active" id="ceo-panel-vision">
+              <blockquote class="ceo-quote">
+                "Construimos Timmy's en La Estrella con una convicción empresarial firme: reunir 40 obras maestras de la gastronomía colombiana y europea con sus recetas abiertas al público, demostrando que el talento antioqueño puede ejecutar con rigor de tres estrellas Michelin."
+              </blockquote>
+              <p class="ceo-bio">
+                Bajo el liderazgo ejecutivo de <strong>Andrés Julián Tobón Montoya</strong>, <strong>Timmy's</strong> se ha consolidado como un referente de innovación gastronómica en el Sur del Valle de Aburrá. Su modelo empresarial integra arquitectura interior en tonos claros y pasteles, digitalización total de la carta de 40 platos y trazabilidad culinaria abierta.
+              </p>
+            </div>
+
+            <div class="ceo-tab-panel" id="ceo-panel-trayectoria">
+              <ul class="ceo-timeline-list">
+                <li><strong>Fase 1 • Curaduría de 40 Recetas Maestras:</strong> Investigación histórica y estandarización técnica de 10 platos colombianos, 10 franceses, 10 españoles y 10 italianos.</li>
+                <li><strong>Fase 2 • Consolidación en La Estrella:</strong> Operación de la Sede Parque Principal y la Sede Campestre Pueblo Viejo.</li>
+                <li><strong>Fase 3 • Ecosistema Digital & Cava:</strong> Plataforma web con registro real de usuarios, bandeja de degustación y cava interactiva.</li>
+              </ul>
+            </div>
+
+            <div class="ceo-tab-panel" id="ceo-panel-compromiso">
+              <p class="ceo-bio">
+                Para <strong>Andrés Julián Tobón Montoya</strong>, el crecimiento empresarial va de la mano con el campo colombiano: trabajamos directamente con agricultores de La Estrella, Santa Elena, Urrao, el Suroeste Antioqueño y pescadores artesanales del Pacífico y Caribe.
+              </p>
+            </div>
+
+            <div class="ceo-pillars">
+              <div class="pillar-item">
+                <h4>📈 Excelencia Operativa</h4>
+                <p>Control de calidad milimétrico sobre las 40 partidas del menú y sus tiempos térmicos.</p>
+              </div>
+              <div class="pillar-item">
+                <h4>🤝 Liderazgo Humano</h4>
+                <p>Escuela interna para chefs, sous chefs, asistentes de cocina y sommeliers en Antioquia.</p>
+              </div>
+              <div class="pillar-item">
+                <h4>🍷 Cultura de Cava</h4>
+                <p>Selección directa de grandes vinos europeos y destilados colombianos de guarda.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 6. BRIGADA CULINARIA COMPLETA (CORREGIDA Y VERIFICADA) ==================== -->
+    <section class="team-section section-padding" id="equipo-chefs">
+      <div class="container">
+        <div class="section-header text-center reveal-item reveal-up">
+          <span class="section-subtitle">Talento Gastronómico</span>
+          <h2 class="section-title">Brigada de Chefs, Asistentes de Cocina y Sommelier</h2>
+          <p class="section-desc">
+            Un equipo estructurado bajo el sistema clásico de brigadas francesas (<em>Brigade de Cuisine</em>), ejecutando los 40 platos de nuestra carta en La Estrella.
+          </p>
+        </div>
+
+        <div class="team-grid">
+          <!-- 1. Chef Ejecutivo (Imagen 100% corregida de Chef real en cocina) -->
+          <article class="team-card reveal-item reveal-up">
+            <div class="team-img-box">
+              <img src="https://images.unsplash.com/photo-1581299894007-aaa50297cf16?auto=format&fit=crop&w=700&q=80" alt="Chef Ejecutivo de Timmy's" loading="lazy" />
+              <span class="team-role-tag tag-coral">Chef Ejecutivo (Chef de Cuisine)</span>
+            </div>
+            <div class="team-info">
+              <div class="team-flag-row">
+                <img src="https://flagcdn.com/w40/fr.png" alt="Francia" />
+                <img src="https://flagcdn.com/w40/co.png" alt="Colombia" />
+                <span>Dirección Franco-Colombiana</span>
+              </div>
+              <h3>Chef Mateo Valencia & Laurent Moreau</h3>
+              <p class="team-desc">Responsables de la dirección de los 40 platos, control de temperaturas sous-vide, reducciones demi-glace y fusión de raíces andinas con técnica francesa.</p>
+            </div>
+          </article>
+
+          <!-- 2. Sous Chef Senior -->
+          <article class="team-card reveal-item reveal-up">
+            <div class="team-img-box">
+              <img src="https://images.unsplash.com/photo-1595273670150-bd0c3c392e46?auto=format&fit=crop&w=700&q=80" alt="Sous Chef Mediterránea" loading="lazy" />
+              <span class="team-role-tag tag-teal">Sous Chef Senior</span>
+            </div>
+            <div class="team-info">
+              <div class="team-flag-row">
+                <img src="https://flagcdn.com/w40/es.png" alt="España" />
+                <img src="https://flagcdn.com/w40/it.png" alt="Italia" />
+                <span>Partida Ibérica & Piamontesa</span>
+              </div>
+              <h3>Chef Valeria Restrepo</h3>
+              <p class="team-desc">Maestra arrocera y especialista en pastas artesanales laminadas al minuto. Supervisa las 20 preparaciones de España e Italia.</p>
+            </div>
+          </article>
+
+          <!-- 3. Asistentes de Cocina -->
+          <article class="team-card reveal-item reveal-up">
+            <div class="team-img-box">
+              <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=700&q=80" alt="Asistentes de Cocina y Mise en Place" loading="lazy" />
+              <span class="team-role-tag tag-amber">Asistentes de Cocina & Commis</span>
+            </div>
+            <div class="team-info">
+              <div class="team-flag-row">
+                <img src="https://flagcdn.com/w40/co.png" alt="Colombia" />
+                <span>Mise en Place & Corte de Precisión</span>
+              </div>
+              <h3>Camilo Ochoa, Sofía Quintero & Tomás Ríos</h3>
+              <p class="team-desc">Asistentes de cocina encargados de la recepción de huerta orgánica en La Estrella, cortes milimétricos, fondos base y emplatado de precisión.</p>
+            </div>
+          </article>
+
+          <!-- 4. Head Sommelier & Mixólogo -->
+          <article class="team-card reveal-item reveal-up">
+            <div class="team-img-box">
+              <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=700&q=80" alt="Head Sommelier y Chef Pastelero" loading="lazy" />
+              <span class="team-role-tag tag-lavender">Head Sommelier & Mixólogo</span>
+            </div>
+            <div class="team-info">
+              <div class="team-flag-row">
+                <img src="https://flagcdn.com/w40/fr.png" alt="Francia" />
+                <img src="https://flagcdn.com/w40/es.png" alt="España" />
+                <img src="https://flagcdn.com/w40/co.png" alt="Colombia" />
+                <span>Cava & Destilados</span>
+              </div>
+              <h3>Sebastián Giraldo</h3>
+              <p class="team-desc">Custodio de la Cava de Licores de Timmy's. Diseña los maridajes para las 40 recetas con vinos europeos y destilados colombianos.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 7. MURO DE COMENTARIOS CON LOS 40 PLATOS DISPONIBLES ==================== -->
+    <section class="comments-section section-padding" id="comentarios">
+      <div class="container">
+        <div class="section-header text-center reveal-item reveal-up">
+          <span class="section-subtitle">Comunidad Timmy's</span>
+          <h2 class="section-title">Reseñas en Tiempo Real de Nuestros Comensales</h2>
+          <p class="section-desc">
+            Selecciona cualquiera de nuestros 40 platos o 8 licores de la cava y comparte tu calificación.
+          </p>
+        </div>
+
+        <div class="comments-layout">
+          <div class="comment-form-card reveal-item reveal-left">
+            <h3>Publicar una Reseña</h3>
+            <p class="comment-auth-hint" id="commentAuthHint">
+              💡 ¿Ya tienes cuenta? <button type="button" class="link-btn" id="inlineLoginTrigger">Inicia sesión o regístrate aquí</button> para comentar como Cliente Verificado.
+            </p>
+
+            <form id="commentForm" novalidate>
+              <div class="form-group">
+                <label for="commentAuthor">Nombre Completo *</label>
+                <input type="text" id="commentAuthor" required placeholder="Ej. Laura Montoya" />
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="commentOriginFlag">Cocina / Experiencia Evaluada *</label>
+                  <select id="commentOriginFlag" required>
+                    <option value="co">Colombia (Típicos de Autor)</option>
+                    <option value="fr">Francia (Alta Cocina Michelin)</option>
+                    <option value="es">España (Vanguardia Michelin)</option>
+                    <option value="it">Italia (Clásicos Michelin)</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="commentRating">Calificación *</label>
+                  <select id="commentRating" required>
+                    <option value="5">⭐⭐⭐⭐⭐ (5/5 Excelente)</option>
+                    <option value="4">⭐⭐⭐⭐ (4/5 Muy Bueno)</option>
+                    <option value="3">⭐⭐⭐ (3/5 Bueno)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="commentDish">Plato (de los 40 disponibles) o Licor Probado *</label>
+                <select id="commentDish" required></select>
+              </div>
+
+              <div class="form-group">
+                <label for="commentText">Tu Comentario *</label>
+                <textarea id="commentText" rows="4" required placeholder="Describe tu experiencia con el sabor, la receta desplegable o la atención en La Estrella..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-full">Publicar Reseña en Vivo</button>
+              <p id="commentFeedback" class="form-feedback" aria-live="polite"></p>
+            </form>
+          </div>
+
+          <div class="comments-list-container reveal-item reveal-right">
+            <div class="comments-list-header">
+              <h3>Opiniones Verificadas (<span id="commentsCount">0</span>)</h3>
+              <span class="rating-pill">⭐ 4.95 / 5.0 en La Estrella</span>
+            </div>
+            <div class="comments-list" id="commentsList"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 8. SEDES EN LA ESTRELLA, RESERVA INTERCONECTADA Y FAQ ==================== -->
+    <section class="contact-section section-padding" id="contacto">
+      <div class="container">
+        <div class="section-header text-center reveal-item reveal-up">
+          <span class="section-subtitle">Sur del Valle de Aburrá • Antioquia</span>
+          <h2 class="section-title">Sedes en La Estrella y Reserva Inteligente</h2>
+          <p class="section-desc">
+            Tu selección de platos (de los 40 del menú) y licores de la <strong>Bandeja de Degustación</strong> se sincroniza automáticamente con este formulario.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="locations-column reveal-item reveal-left">
+            <div class="location-card">
+              <div class="loc-header-row">
+                <span class="loc-badge">Sede Principal • La Estrella</span>
+                <img src="https://flagcdn.com/w40/co.png" alt="Colombia" class="mini-flag" />
+              </div>
+              <h3>📍 Timmy's Parque Principal La Estrella</h3>
+              <p><strong>Dirección:</strong> Calle 77 Sur # 60 - <span class="pending-tag">[PENDIENTE DE CONFIRMAR]</span>, Cabecera Municipal / Parque Principal, La Estrella, Antioquia.</p>
+              <p><strong>Horarios:</strong> Martes a Jueves: 12:00 m. – 10:00 p.m. | Viernes y Sábado: 12:00 m. – 11:30 p.m. | Domingos y Festivos: 12:00 m. – 9:00 p.m.</p>
+              <p><strong>Contacto Directo:</strong> <span class="pending-tag">+57 300 000 0000 [PENDIENTE DE CONFIRMAR]</span></p>
+            </div>
+
+            <div class="location-card">
+              <div class="loc-header-row">
+                <span class="loc-badge loc-badge-mint">Sede Campestre • Cava & Eventos</span>
+                <img src="https://flagcdn.com/w40/co.png" alt="Colombia" class="mini-flag" />
+              </div>
+              <h3>🌿 Timmy's Campestre Pueblo Viejo</h3>
+              <p><strong>Dirección:</strong> Variante Caldas - La Estrella, Sector Pueblo Viejo <span class="pending-tag">[PENDIENTE DE CONFIRMAR KM]</span>, La Estrella, Antioquia.</p>
+              <p><strong>Diferenciadores:</strong> Cava subterránea de licores, salones ejecutivos privados, jardines al aire libre y parqueadero vigilado gratuito.</p>
+            </div>
+
+            <div class="faq-box">
+              <h3>Preguntas Frecuentes</h3>
+              <div class="faq-item">
+                <button type="button" class="faq-question" aria-expanded="false">
+                  <span>¿Están los 40 platos disponibles todos los días en La Estrella?</span>
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>Sí. Nuestras cuatro partidas de cocina (Colombia, Francia, España e Italia) operan simultáneamente. Si deseas un plato de cocción prolongada como la Lechona en Piel de Cristal, el Cassoulet o el Cochinillo, puedes pre-seleccionarlo en tu Bandeja de Degustación al reservar.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button type="button" class="faq-question" aria-expanded="false">
+                  <span>¿Cómo funciona el registro de usuarios en la web?</span>
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>Al registrarte en el botón superior derecho, tus datos reales quedan almacenados de forma persistente en tu navegador (`localStorage`), autocompletando tus reservas y otorgándote la insignia de Cliente Verificado en el muro de reseñas.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="reservation-card reveal-item reveal-right">
+            <h3>Confirmar Reserva de Mesa</h3>
+            <p class="res-note">Si iniciaste sesión o armaste tu Bandeja de Degustación, tus datos y platos seleccionados se cargarán automáticamente aquí.</p>
+
+            <form id="reservationForm" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="resName">Nombre del Titular *</label>
+                  <input type="text" id="resName" required placeholder="Tu nombre completo" />
+                </div>
+                <div class="form-group">
+                  <label for="resPhone">WhatsApp / Celular *</label>
+                  <input type="tel" id="resPhone" required placeholder="300 000 0000" />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="resDate">Fecha de Reserva *</label>
+                  <input type="date" id="resDate" required />
+                </div>
+                <div class="form-group">
+                  <label for="resGuests">Comensales *</label>
+                  <select id="resGuests" required>
+                    <option value="2 Personas">2 Personas (Mesa Pareja)</option>
+                    <option value="4 Personas">4 Personas (Mesa Familiar)</option>
+                    <option value="6 Personas">6 Personas (Mesa Cava)</option>
+                    <option value="8+ Personas VIP">8 o más Personas (Salón Reservado)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="resSede">Sede en La Estrella, Antioquia *</label>
+                <select id="resSede" required>
+                  <option value="Sede Parque Principal - La Estrella">Sede Parque Principal - La Estrella</option>
+                  <option value="Sede Campestre Pueblo Viejo - La Estrella">Sede Campestre Pueblo Viejo - La Estrella</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="resNotes">Platos / Licores Pre-Seleccionados y Notas Especiales</label>
+                <textarea id="resNotes" rows="4" placeholder="Agrega cualquiera de los 40 platos desde el catálogo o escribe tus preferencias aquí..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-full">Generar Reserva Validada</button>
+              <div id="reservationFeedback" class="form-feedback" aria-live="polite"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== DRAWER LATERAL: BANDEJA DE DEGUSTACIÓN INTERCONECTADA ==================== -->
+  <div class="tray-backdrop" id="trayBackdrop" aria-hidden="true">
+    <aside class="tasting-tray-drawer" aria-labelledby="trayTitle">
+      <div class="tray-header">
+        <h3 id="trayTitle">🍽️ Mi Selección de Degustación</h3>
+        <button type="button" class="modal-close-btn" id="closeTrayBtn" aria-label="Cerrar bandeja">&times;</button>
+      </div>
+      <p class="tray-subtitle">Platos y licores seleccionados para tu visita en La Estrella:</p>
+      <div class="tray-items-list" id="trayItemsList"></div>
+      <div class="tray-footer">
+        <div class="tray-total-row">
+          <span>Total Estimado:</span>
+          <strong id="trayTotalValue">$0 COP</strong>
+        </div>
+        <button type="button" class="btn btn-primary btn-full" id="transferToReservationBtn">
+          Transferir Selección a mi Reserva ↓
+        </button>
+        <button type="button" class="btn btn-secondary btn-full" id="clearTrayBtn">
+          Vaciar Selección
+        </button>
+      </div>
+    </aside>
+  </div>
+
+  <!-- ==================== MODAL DE REGISTRO E INICIO DE SESIÓN REAL ==================== -->
+  <div class="auth-modal-backdrop" id="authModalBackdrop" aria-hidden="true">
+    <div class="auth-modal" role="dialog" aria-modal="true" aria-labelledby="authModalTitle">
+      <button type="button" class="modal-close-btn" id="closeAuthModalBtn" aria-label="Cerrar ventana">&times;</button>
+
+      <!-- Vista Invitado -->
+      <div id="authGuestView">
+        <div class="auth-header">
+          <span class="badge-pill">Club Gastronómico Timmy's</span>
+          <h2 id="authModalTitle">Registro e Inicio de Sesión Real</h2>
+          <p>Tus datos personales, bandera de cocina favorita y selección de degustación quedan guardados realmente en el navegador.</p>
+        </div>
+
+        <div class="auth-tabs" role="tablist">
+          <button type="button" class="auth-tab active" data-tab="loginTab">Iniciar Sesión</button>
+          <button type="button" class="auth-tab" data-tab="registerTab">Crear Cuenta Nueva</button>
+        </div>
+
+        <form id="loginForm" class="auth-form active" novalidate>
+          <div class="form-group">
+            <label for="loginEmail">Correo Electrónico *</label>
+            <input type="email" id="loginEmail" required placeholder="cliente@correo.com" />
+          </div>
+          <div class="form-group">
+            <label for="loginPassword">Contraseña *</label>
+            <input type="password" id="loginPassword" required placeholder="••••••••" />
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Entrar a mi Cuenta</button>
+          <p id="loginFeedback" class="form-feedback" aria-live="polite"></p>
+        </form>
+
+        <form id="registerForm" class="auth-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="regName">Nombre Completo *</label>
+              <input type="text" id="regName" required placeholder="Ej. Valentina Gómez" />
+            </div>
+            <div class="form-group">
+              <label for="regPhone">Celular / WhatsApp *</label>
+              <input type="tel" id="regPhone" required placeholder="300 123 4567" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="regEmail">Correo Electrónico *</label>
+              <input type="email" id="regEmail" required placeholder="valentina@correo.com" />
+            </div>
+            <div class="form-group">
+              <label for="regCity">Municipio / Ciudad *</label>
+              <input type="text" id="regCity" required value="La Estrella, Antioquia" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="regPreference">Escuela Gastronómica Favorita *</label>
+            <select id="regPreference" required>
+              <option value="co|Alta Cocina Típica Colombiana">Colombia - Alta Cocina Típica Colombiana</option>
+              <option value="fr|Alta Cocina Francesa Michelin">Francia - Alta Cocina Francesa Michelin</option>
+              <option value="es|Vanguardia Española Michelin">España - Vanguardia Española Michelin</option>
+              <option value="it|Tradición Italiana Michelin">Italia - Tradición Italiana Michelin</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="regPassword">Contraseña (mínimo 6 caracteres) *</label>
+            <input type="password" id="regPassword" required minlength="6" placeholder="Mínimo 6 caracteres" />
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full">Registrar Usuario Ahora</button>
+          <p id="registerFeedback" class="form-feedback" aria-live="polite"></p>
+        </form>
+      </div>
+
+      <!-- Vista Perfil Activo -->
+      <div id="authProfileView" hidden>
+        <div class="profile-header-box">
+          <div class="profile-avatar" id="profileAvatar">T</div>
+          <div>
+            <span class="verified-member-tag">✓ Socio Activo del Club Timmy's</span>
+            <h3 id="profileNameDisplay">Usuario</h3>
+            <p id="profileEmailDisplay">correo@ejemplo.com</p>
+          </div>
+        </div>
+
+        <div class="profile-details-grid">
+          <div class="profile-detail-item">
+            <span>Teléfono:</span>
+            <strong id="profilePhoneDisplay">-</strong>
+          </div>
+          <div class="profile-detail-item">
+            <span>Ubicación:</span>
+            <strong id="profileCityDisplay">-</strong>
+          </div>
+          <div class="profile-detail-item">
+            <span>Preferencia Culinaria:</span>
+            <strong id="profilePrefDisplay">-</strong>
+          </div>
+          <div class="profile-detail-item">
+            <span>Fecha de Registro:</span>
+            <strong id="profileDateDisplay">-</strong>
+          </div>
+        </div>
+
+        <div class="registered-users-summary">
+          <h4>Base de Datos Local de Usuarios Registrados (<span id="totalUsersCount">0</span>)</h4>
+          <ul id="registeredUsersList" class="registered-users-list"></ul>
+        </div>
+
+        <button type="button" class="btn btn-secondary btn-full" id="logoutBtn">Cerrar Sesión</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <h3>Timmy's Restaurante & Cava</h3>
+        <p>40 obras culinarias de comida típica colombiana y clásicos Michelin de Francia, España e Italia en el corazón de La Estrella, Antioquia.</p>
+        <p class="footer-ceo-credit">CEO & Fundador: <strong>Andrés Julián Tobón Montoya</strong>.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navegación Rápida</h4>
+        <ul>
+          <li><a href="#menu-gastronomico">40 Platos con Receta y Origen</a></li>
+          <li><a href="#cava-licores">Portal de Cava y Licores</a></li>
+          <li><a href="#ceo-section">Visión del CEO</a></li>
+          <li><a href="#equipo-chefs">Brigada de Cocina</a></li>
+          <li><a href="#comentarios">Libro de Reseñas</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Sedes en La Estrella, Antioquia</h4>
+        <p>📍 Calle 77 Sur # 60 - [PENDIENTE], Parque Principal La Estrella.</p>
+        <p>📍 Variante Caldas - La Estrella, Sector Pueblo Viejo.</p>
+        <p class="legal-drink">⚠️ El exceso de alcohol es perjudicial para la salud. Prohibido el expendio de bebidas embriagantes a menores de edad (Ley 124 de 1994).</p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Timmy's Restaurante - La Estrella, Antioquia, Colombia. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Botones Flotantes -->
+  <a href="https://wa.me/573000000000?text=Hola%20Timmy's%20Restaurante%20en%20La%20Estrella,%20quiero%20reservar%20una%20mesa." target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Contactar por WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/></svg>
+  </a>
+  <button type="button" class="back-to-top" id="backToTopBtn" aria-label="Volver arriba">&#8593;</button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
